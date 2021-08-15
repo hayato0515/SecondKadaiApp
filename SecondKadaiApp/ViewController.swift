@@ -9,11 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    @IBOutlet weak var textFiled: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+       
+        
     }
-
+    
+    @IBAction func unwind(_segue: UIStoryboardSegue){
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let next = segue.destination as? NextViewController
+        
+        next?.text = (self.textFiled.text)!
+    }
+   
+   
+    
 
 }
 
